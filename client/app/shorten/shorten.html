@@ -14,7 +14,8 @@
   <form name="shortenForm" ng-submit="addLink()">
   <input type= "text" ng-model = "link.url">
   <button onclick="submit">Submit</button>
-  <!-- div ng-if="invalid" -->
+  <h1 ng-if="invalid">This link is not valid.
+  </h1>
   </form>
   </div>
 </div>
