@@ -13,10 +13,10 @@
   <!-- <div class = 'link' ng-model = 'Links'> -->
   <!-- repeat html for each link - use ng-repeat?-->
   <ul ng-model = "Links">
-    <li class = 'link' ng-repeat="link in data.links">
+    <li class = 'link' ng-repeat="link in data.links | orderBy:'-visits'">
       <img src='./assets/redirect_icon.png'/>
       <div class='info'>
-        <div class='visits'><span class='count'>{{visits}}</span>Visits</div>
+        <div class='visits'><span class='count'>{{link.visits}}</span>Visits</div>
         <div class='title'>{{link.title}}</div>
         <div class='original'>{{link.url}}</div>
         <a href='{{link.base_url}}/api/links/{{link.code}}'>{{link.base_url}}/{{link.code}}</a>
