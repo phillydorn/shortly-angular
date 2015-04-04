@@ -1,4 +1,21 @@
 <div id='container'>
   <!-- Your html here -->
-  <input ng-model = 'Links'>
+  <div class='navigation'>
+    <ul>
+    <li> 
+      <a href="#/links">Links</a>
+    </li>
+    <li>
+      <a href="#/shorten">Shorten</a>
+    </li>
+    </ul>
+  </div>
+  <div class = 'link' ng-model = 'Links'>
+  <!-- repeat html for each link - use ng-repeat?-->
+  <ul>
+    <li ng-repeat="link in data.links">{{link}}
+    </li>
+  </ul>
+
+  </div>
 </div>
